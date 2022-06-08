@@ -1,0 +1,9 @@
+.card.card__hover {
+  transition: 0.5s; }
+
+.card.card__hover:hover {
+  transform: scale(1.1); }
+
+img {
+  height: 200px !important;
+  object-fit: cover; }
