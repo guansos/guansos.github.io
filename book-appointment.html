@@ -61,9 +61,8 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
         }
-
     </style>
-   <link rel="stylesheet" href="estilos.css" />
+
 
 </head>
 
@@ -114,84 +113,108 @@
     </header>
 
     <main>
-
-        <section class="py-5 text-center container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">¿Cómo se hace un blanqueamiento dental?</h1>
-                    <p class="lead text-muted">Uno de los tratamientos que más se demandan a día de hoy es el blanqueamiento dental. Generalmente, el blanco de los dientes tiene factor genético por lo que es normal encontrar a algunas personas con los dientes más blancos que el resto. Pese a esto, aspectos como la higiene bucal, un buen estado de la dentadura o determinadas sustancias como el tabaco, el café o el vino pueden hacer que el blanco natural de los dientes se oscurezca. ¿Quieres saber en qué consiste el blanqueamiento dental? ¿Cómo es el proceso de blanqueamiento dental? ¿Qué cuidados debes aplicar en tus dientes tras el tratamiento? En este post resolveremos todas tus dudas.</p>
-                    <p>
-                        <a href="book-appointment.html" class="btn btn-primary my-2">Reservá tu turno</a>
-                    </p>
+        <div class="content-body">
+            <!-- Book Appointment -->
+            <section id="book-appointment">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Coordiná tu cita</h2>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstname">Nombre: <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Nombre" required
+                                            id="firstname">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastname">Apellido: <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Apellido" id="lastname"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <label for="dob">Fecha de nacimiento: <span class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" id="dob" name="dob" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <label for="gender">Genero:</label>
+                                        <select name="gender" id="gender" class="form-control">
+                                            <option value="genero">Genero</option>
+                                            <option value="male">Masculino</option>
+                                            <option value="female">Femenino</option>
+                                            <option value="notsay">Prefiero no decirlo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <label for="service">Que servicio necesitas? <span class="text-danger">*</span></label>
+                                        <select name="Service" class="form-control" id="service" required>
+                                            <option value="servicio">Servicio</option>
+                                            <option value="blanqueamiento">Blanqueamiento</option>
+                                            <option value="limpieza">Limpieza</option>
+                                            <option value="ortodoncia">Ortodoncia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <label for="date">Cuando queres venir?<span class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" id="date" name="date" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email: <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" name="email" id="email"
+                                            placeholder="Ingresa tu email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Numero de contacto:</label>
+                                        <input type="number" class="form-control" id="phone" name="phone"
+                                            placeholder="Ingresa tu numero de contacto" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="symptoms">Algo que debamos saber?</label>
+                                        <textarea cols="3" rows="3" id="symptoms" class="form-control"
+                                            placeholder="Cuentanos algun problema que debamos saber"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer ml-auto">
+                                <button type="submit" class="btn btn-outline-success mr-1">Confirmar</button> <button
+                                    type="submit" class="btn btn-outline-danger">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <div class="album py-5 bg-light">
-            <div class="container">
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="images/tooth.jpg" alt="Blanqueamiento" class="img-thumbnail">
-                            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg> -->
-
-                            <div class="card-body">
-                                <p class="card-text">En la odontología estética, el blanqueamiento dental es un tratamiento dental estético que logra
-                                    reducir varios tonos el color original de las piezas dentales, dejando los dientes más blancos y brillantes.
-                                    </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Blanqueamiento</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="images/ortodoncia.jpeg" alt="ortodoncia" class="img-thumbnail">
-
-                            <div class="card-body">
-                                <p class="card-text">La ortodoncia se encarga de todo el estudio, prevención, diagnóstico y tratamiento de las anomalías
-                                    de forma, posición, relación y función de las estructuras dentomaxilofaciales.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Ortodoncia</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="images/limpieza.jpeg" alt="limpieza">
-                            <div class="card-body">
-                                <p class="card-text">Por muy bien que te cepilles los dientes o uses el hilo dental, siempre quedan zonas difíciles de
-                                    alcanzar. Una limpieza dental puede ayudarte a tener los dientes realmente limpios. La enfermedad gingival a menudo
-                                    está causada por la acumulación de placa bacteriana.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Limpieza Dental</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                  
     </main>
 
     <footer class="text-muted py-5">
         <div class="container">
             <p class="float-end mb-1">
-                <a href="#">Volver al inicio</a>
+                <a href="index.html" >Volver al inicio</a>
             </p>
             <p class="mb-1">Copyright 2022 Roberto Campos. Todos los derechos reservados.</p>
         </div>
