@@ -1,0 +1,9 @@
+@import "styles.css";
+
+h4 {
+    transition: 0.5s;
+    &:hover{
+        color: rgb(108, 97, 97);
+    }
+    
+}

@@ -1,0 +1,8 @@
+@import "styles.css";
+
+img.img-pages {
+
+    &:hover {
+        filter: brightness(1.6);
+    }
+}
