@@ -38,12 +38,12 @@ footer {
   bottom: 0;
   width: 100%; }
 
-main.container {
+main .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%; }
-  main.container .row {
+  main .container .row {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
