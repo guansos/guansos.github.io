@@ -1,5 +1,5 @@
 @import url(styles.css);
-h4 {
+img.img-pages {
   transition: 0.5s; }
-  h4:hover {
-    color: #6c6161; }
+  img.img-pages:hover {
+    border: 1px solid #666; }

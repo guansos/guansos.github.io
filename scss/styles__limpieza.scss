@@ -3,6 +3,7 @@
 img.img-pages {
 
     &:hover {
-        filter: brightness(1.6);
+        border: 1px solid #666;
+        // filter: brightness(1.6);
     }
 }
