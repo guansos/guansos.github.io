@@ -72,43 +72,54 @@
             <section id="book-appointment">
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title">Cotizá tu plan odontologico</h2>
+                        <h2 class="card-title">Contratá tu plan odontologico</h2>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="#">
                             <div class="row">
-                                <div class="col-md-11">
-                                    <label for="adultosRange" class="form-label">Cantidad de adultos</label>
-                                    <input type="range" class="form-range" min="0" max="5" value="0" name="adultosRange" id="adultosRange"
-                                        oninput="this.form.adultosCount.value=this.value; calcular();"
-                                        onchange="this.form.adultosCount.value=this.value; calcular();">
-                                        
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstname">Nombre: <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Nombre" required
+                                            id="firstname">
+                                    </div>
                                 </div>
-                                <div class="col-md-1">
-                                <input type="number" name="adultosCount" min="0" max="5"
-                                        oninput="this.form.adultosRange.value=this.value" /></div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastname">Apellido: <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Apellido" id="lastname"
+                                            required>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col-md-11">
-                                    <label for="limpiezasAnualesRange" class="form-label">Limpiezas anuales</label>
-                                    <input type="range" class="form-range" min="0" max="5" value="0" name="limpiezasAnualesRange" id="limpiezasAnualesRange"
-                                        oninput="this.form.limpiezasAnuales.value=this.value; calcular();"
-                                        onchange="this.form.limpiezasAnuales.value=this.value; calcular();">
+                            <div class="row">   
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formadepago">Forma de pago:</label>
+                                        <select id="formadepago" name="formadepago" id="formadepago" class="form-control">
+                                            <option value="">--Seleccione una forma de pago--</option>
+                                            <option value="tarjetadecredito">Tarjeta de credito</option>
+                                            <option value="tarjetadedebito">Tarjeta de debito</option>
                                     
+                                            <option value="transferencia">Transferencia</option>
+                                            <option value="debitoautomatico">Debito automatico</option>
+                     
+                                                </select>
+                                    </div>
                                 </div>
-                                <div class="col-md-1">
-                                <input type="number" name="limpiezasAnuales" min="0" max="5"
-                                        oninput="this.form.limpiezasAnualesRange.value=this.value" /></div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div id="placeholder" class="form-group">
+                                        
+                                    </div>
+                                </div>
                             </div>
-                            <h1>Importe mensual</h1>
-                            <label id="importeMensual">$1000</label>
-                            <h1>Importe anual</h1>
-                            <label id="importeAnual">$10000</label>
+                            
+                            <div class="card-footer ml-auto">
+                                <button type="submit" class="btn btn-outline-success mr-1" onclick="confirmar()">Confirmar</button>
+                            </div>
                         </form>
                     </div>
                 </div>
-                <button onclick="contratar()" type="button">Contratar</button>
             </section>
         </div>
 
@@ -124,7 +135,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-        <script src="cotizador.js"></script>
+        <script src="contratar.js"></script>
 </body>
 
 </html>
