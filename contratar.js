@@ -8,13 +8,13 @@ formadepago.addEventListener('change', (event) => {
         case 'tarjetadedebito':
             var lbl = document.createElement("label");
             lbl.id = "lblTarjetaDebito";
-            lbl.setAttribute('for', 'inputTarjetaDebito');
+            lbl.setAttribute('for', 'inputTarjeta');
             lbl.innerText = "Ingrese los 16 dígitos de su tarjeta:"
 
             placeholder.appendChild(lbl);
 
             var input = document.createElement("input");
-            input.id = "inputTarjetaDebito";
+            input.id = "inputTarjeta";
             input.setAttribute('type', 'text');
             input.className += " form-control";
             input.setAttribute('value', '');
@@ -25,13 +25,13 @@ formadepago.addEventListener('change', (event) => {
         case 'tarjetadecredito':
             var lbl = document.createElement("label");
             lbl.id = "labelTarjetaCredito";
-            lbl.setAttribute('for', 'inputTarjetaCredito');
+            lbl.setAttribute('for', 'inputTarjeta');
             lbl.innerText = "Ingrese los 16 dígitos de su tarjeta:"
 
             placeholder.appendChild(lbl);
 
             var input = document.createElement("input");
-            input.id = "inputTarjetaCredito";
+            input.id = "inputTarjeta";
             input.setAttribute('type', 'text');
             input.className += " form-control";
             input.setAttribute('value', '');
@@ -85,5 +85,18 @@ document.addEventListener("keyup", function(event) {
 });
 
 function confirmar() {
+    const inputNombre = document.getElementById('firstname');
+    const inputApellido = document.getElementById('lastname');
+    const selectFormaDePago = document.getElementById('formadepago');
+    const inputDatosDePago = document.getElementById('inputTarjeta');
+    const cotizacion = {
+        nombre: inputNombre.value, 
+        apellido: inputApellido.value,
+        formadepago: selectFormaDePago.value,
+        datosdepago: inputDatosDePago.value,
+    }
+    const cotizacionstring = JSON.stringify(cotizacion);
+    localStorage.setItem('cotizacion', cotizacionstring);
     alert("Contratado. Muchas gracias por su compra.");
 }
+
